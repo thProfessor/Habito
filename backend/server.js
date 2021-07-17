@@ -1,5 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
+const bodyParser = require("body-parser");
+
 // api imported
 const profile = require("./routes/api/profile");
 const contact = require("./routes/api/contact");
@@ -8,9 +10,11 @@ const subscribe = require("./routes/api/subscribe");
 // instance of express as app
 const app = express();
 
+// body parser parsing request body
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 // keep in env file
-const DB =
-  "mongodb+srv://habito:11bajehabito@cluster0.7tu3b.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+const DB = require("./config/keys").mongoURL;
 
 // connected to database using mongoose
 mongoose
@@ -29,7 +33,7 @@ mongoose
 
 // routes section
 app.use("/api/profile", profile);
-app.use("/api/conatct", contact);
+app.use("/api/contact", contact);
 app.use("/api/subscribe", subscribe);
 
 const port = process.env.PORT || 3000;

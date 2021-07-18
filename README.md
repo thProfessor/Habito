@@ -1,7 +1,7 @@
-# Habito
+# Habito#
 Habbit Tracker app
 
-##Api in making!
+##Api in making!##
 <ul>
 <li>Rest api made in node.js</li>
 <li>MongoDb as database</li>
@@ -11,7 +11,7 @@ Habbit Tracker app
 </ul>
 
 
-#Authors
+#Authors##
 1. Yash verma
 2. Vivek Katiyar
 3. Utkarsh Shukla

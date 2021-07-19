@@ -25,3 +25,7 @@ const UserSchema = new Schema({
 });
 
 module.exports = User = mongoose.model("users", UserSchema);
+
+// required field false --> to optional khali bhi save kaarega
+//  true hai khali nahi save karega ==> error throw karega
+// database model plural save == > schema sungular // convention
